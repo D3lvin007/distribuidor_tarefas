@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (tasks.length % numPeople !== 0) {
-            alert(`❌ Divisão injusta! ${tasks.length} tarefas não podem ser dividido igualmente entre ${numPeople} pessoas.`);
+            alert(`❌ Divisão injusta! ${tasks.length} tarefas não podem ser divididas igualmente entre ${numPeople} pessoas.`);
             return false;
         }
 
