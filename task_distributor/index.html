@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidor de Tarefas - Organize e Motive sua Equipe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Distribuidor de Tarefas Nhatave</h1>
+        <p class="subtitle">Organize e distribua tarefas de forma justa e motivacional!</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="num-people">👥 Número de Pessoas (2 - 5):</label>
+                <input type="number" id="num-people" min="2" max="5" value="2" placeholder="Quantas pessoas vão participar?">
+            </div>
+            
+            <div class="input-group" id="names-section">
+                <label>👤 Nomes das Pessoas:</label>
+                <div id="names-container">
+                    <input type="text" class="person-name" placeholder=" Pessoa 1" data-person="1">
+                    <input type="text" class="person-name" placeholder=" Pessoa 2" data-person="2">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="tasks">📝 Tarefas (separadas por vírgula):</label>
+                <textarea id="tasks" rows="5" placeholder="Ex: <Lavar a loiça, Aspirar a casa, Fazer compras, Cozinhar jantar">
+                </textarea>
+            </div>
+            
+            <button id="distribute-btn" class="distribute-btn">🎲 Distribuir Tarefas</button>
+        </div>
+        
+        <div class="output-section" id="output-section" style="display: none;">
+            <h2>🎉 Tarefas Distribuídas</h2>
+            <div id="results"></div>
+            <button id="whatsapp-share-btn" class="whatsapp-btn">
+                📱 Partilhar no WhatsApp
+            </button>
+        </div>
+        
+        <div id="cooldown-info" class="cooldown-info">
+            ⏰ Atenção: Só pode embaralhar as tarefas uma vez por dia. <span id="cooldown-time"></span>
+        </div>
+        
+        <div id="success-message" class="success-message">
+            ✅ Tarefas distribuídas com sucesso! Agora todos sabem o que fazer. D3lvin!
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
